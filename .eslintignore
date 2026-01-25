@@ -1,0 +1,4 @@
+!.storybook
+/worktrees
+NativeApp/*
+src/api/generated.ts

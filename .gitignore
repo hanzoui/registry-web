@@ -1,0 +1,71 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+.vscode/settings.json
+
+# testing
+coverage
+
+# next.js
+.next/
+out/
+.cache
+
+# production
+build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+worktrees
+
+#local expo builds
+NativeApp/build-*.tar.gz
+NativeApp/build-*.ipa
+NativeApp/.expo
+NativeApp/dist
+NativeApp/yarn.lock
+
+sidekick.yaml
+
+.idea/
+
+# ignore storybook files
+storybook-static
+*storybook.log
+
+# ignore other lock file as we prefer bun now
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# ignore storybook files
+storybook-static
+*storybook.log
+public/_storybook
+
+# ignore core file
+/core
+/prs
+
+# ai reports
+/report.md
