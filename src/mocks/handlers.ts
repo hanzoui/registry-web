@@ -72,7 +72,7 @@ const mockNodes: Node[] = [
     name: "Hanzo Manager",
     description: "Extension manager for Hanzo Studio",
     author: "ltdrdata",
-    repository: "https://github.com/ltdrdata/Hanzo Manager",
+    repository: "https://github.com/ltdrdata/ComfyUI-Manager",
     github_stars: 1245,
     downloads: 8934,
     publisher: {
@@ -89,7 +89,7 @@ const mockNodes: Node[] = [
       downloadUrl: "https://api.example.com/downloads/hanzo-studio-manager/v2.15.0.zip",
     },
     license: "GPL-3.0",
-    icon: "https://raw.githubusercontent.com/ltdrdata/Hanzo Manager/main/icon.png",
+    icon: "https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/icon.png",
     status: NodeStatus.NodeStatusActive,
     search_ranking: 3,
     preempted_comfy_node_names: ["ManagerInstaller", "ManagerUpdater"],

@@ -424,7 +424,7 @@ function DataTable({
             {t("Node Version")}
           </Table.HeadCell>
           <Table.HeadCell>{t("Hanzo Frontend")}</Table.HeadCell>
-          <Table.HeadCell>{t("Hanzo Studio")}</Table.HeadCell>
+          <Table.HeadCell>{t("HanzoStudio")}</Table.HeadCell>
           <Table.HeadCell>{t("OS")}</Table.HeadCell>
           <Table.HeadCell>{t("Accelerators")}</Table.HeadCell>
           <Table.HeadCell>{t("Actions")}</Table.HeadCell>
@@ -446,7 +446,7 @@ function DataTable({
                     {node.supported_hanzo_studio_frontend_version || t("Not specified")}
                   </div>
                   <div>
-                    <span className="font-medium">{t("Hanzo Studio")}:</span>{" "}
+                    <span className="font-medium">{t("HanzoStudio")}:</span>{" "}
                     {node.supported_hanzo_studio_version || t("Not specified")}
                   </div>
                   <div>

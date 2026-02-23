@@ -224,7 +224,7 @@ export default function NodeVersionCompatibilityEditModal({
                       )}
                       {nodeData.latest_version.supported_hanzo_studio_version && (
                         <div>
-                          <span className="font-medium">{t("Hanzo Studio")}:</span>{" "}
+                          <span className="font-medium">{t("HanzoStudio")}:</span>{" "}
                           {nodeData.latest_version.supported_hanzo_studio_version}
                         </div>
                       )}
