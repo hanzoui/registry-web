@@ -12,7 +12,7 @@ The Comfy Registry helps the community by standardizing the development of custo
 
 - **Node Versioning**: Developers frequently publish new versions of their custom nodes which often break workflows that rely on them. With registry nodes being semantically versioned, users can now choose to safely upgrade, deprecate, or lock their node versions in place, knowing in advance how their actions will impact their workflows. The workflow JSON will store the version of the node used, so you can always reliably reproduce your workflows.
 
-- **Node Security**: The registry will serve as a backend for the Hanzo Studio-manager. All nodes will be scanned for malicious behaviour such as custom pip wheels, arbitrary system calls, etc. Nodes that pass these checks will have a verification flag beside their name on the UI-manager. For a list of security standards, see the standards.
+- **Node Security**: The registry will serve as a backend for the HanzoStudio-manager. All nodes will be scanned for malicious behaviour such as custom pip wheels, arbitrary system calls, etc. Nodes that pass these checks will have a verification flag beside their name on the UI-manager. For a list of security standards, see the standards.
 
 - **Search**: Search across all nodes on the Registry to find existing nodes for your workflow.
 
