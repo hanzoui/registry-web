@@ -70,8 +70,8 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, title }) => {
         <Button
           href={
             router.locale && router.locale.startsWith("zh")
-              ? "https://docs.comfy.org/zh-CN"
-              : "https://docs.comfy.org/registry/overview"
+              ? "https://docs.hanzo.ai/zh-CN"
+              : "https://docs.hanzo.ai/registry/overview"
           }
           color="blue"
           size="xs"

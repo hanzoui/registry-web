@@ -19,7 +19,7 @@ const meta: Meta<typeof NodeDetails> = {
     },
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: true,
@@ -57,7 +57,7 @@ export const Default: Story = {
   parameters: {
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: true,
@@ -88,7 +88,7 @@ export const WithPublisherRoute: Story = {
       router: {
         query: {
           publisherId: "kosinkadink",
-          nodeId: "example-comfyui-custom-node",
+          nodeId: "example-hanzo-studio-custom-node",
         },
         pathname: "/publishers/[publisherId]/nodes/[nodeId]",
         asPath: "/publishers/kosinkadink/nodes/1",
@@ -106,7 +106,7 @@ export const Loading: Story = {
   parameters: {
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: false,
@@ -194,7 +194,7 @@ export const AdminUser: Story = {
   parameters: {
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: true,
@@ -253,7 +253,7 @@ export const NoPermissions: Story = {
   parameters: {
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: true,
@@ -427,7 +427,7 @@ export const NodeWithManyVersions: Story = {
             },
             {
               version: "4.7.5",
-              changelog: "Compatibility fixes for latest ComfyUI version",
+              changelog: "Compatibility fixes for latest Hanzo Studio version",
               date: "2023-04-18T10:55:00Z",
             },
             {
@@ -477,7 +477,7 @@ export const LoggedOut: Story = {
   parameters: {
     nextjs: {
       router: {
-        query: { nodeId: "example-comfyui-custom-node" },
+        query: { nodeId: "example-hanzo-studio-custom-node" },
         pathname: "/nodes/[nodeId]",
         asPath: "/nodes/1",
         isReady: true,

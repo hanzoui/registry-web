@@ -21,12 +21,12 @@ const CopyableCodeBlock = ({ code }) => {
       <div className="flex items-center gap-1">
         <a
           target="_blank"
-          href="https://docs.comfy.org/comfy-cli/getting-started#install-cli"
+          href="https://docs.hanzo.ai/hanzo-cli/getting-started#install-cli"
           rel="noopener noreferrer"
         >
           <IoIosInformationCircle
             className="h-5 w-5"
-            title={t("Install Comfy CLI with: npm install -g comfy-cli")}
+            title={t("Install Comfy CLI with: npm install -g hanzo-cli")}
           />
         </a>
         <pre className="text-xs pr-[5em]">{code}</pre>

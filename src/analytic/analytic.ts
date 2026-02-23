@@ -19,7 +19,7 @@ class MixpanelAnalytics {
         debug: true,
         track_pageview: true,
         persistence: "localStorage",
-        api_host: "https://mp.comfy.org",
+        api_host: "https://mp.hanzo.ai",
       });
     }
   }

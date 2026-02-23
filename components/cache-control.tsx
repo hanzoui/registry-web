@@ -8,7 +8,7 @@ import {
 import { REQUEST_OPTIONS_NO_CACHE } from "@/src/constants";
 //
 // This file should keep track with backend:
-// https://github.com/Comfy-Org/comfy-api/blob/main/server/middleware/cache_control.go
+// https://github.com/hanzoui/comfy-api/blob/main/server/middleware/cache_control.go
 //
 // Currently only below queries have cache control header:
 /*

@@ -5532,10 +5532,10 @@ export interface Node {
   status_detail?: string;
   /** List of accelerators (e.g. CUDA, DirectML, ROCm) that this node supports */
   supported_accelerators?: string[];
-  /** Supported versions of ComfyUI frontend */
-  supported_comfyui_frontend_version?: string;
-  /** Supported versions of ComfyUI */
-  supported_comfyui_version?: string;
+  /** Supported versions of Hanzo Studio frontend */
+  supported_hanzo_studio_frontend_version?: string;
+  /** Supported versions of Hanzo Studio */
+  supported_hanzo_studio_version?: string;
   /** List of operating systems that this node supports */
   supported_os?: string[];
   tags?: string[];
@@ -5575,10 +5575,10 @@ export interface NodeVersion {
   status_reason?: string;
   /** List of accelerators (e.g. CUDA, DirectML, ROCm) that this node supports */
   supported_accelerators?: string[];
-  /** Supported versions of ComfyUI frontend */
-  supported_comfyui_frontend_version?: string;
-  /** Supported versions of ComfyUI */
-  supported_comfyui_version?: string;
+  /** Supported versions of Hanzo Studio frontend */
+  supported_hanzo_studio_frontend_version?: string;
+  /** Supported versions of Hanzo Studio */
+  supported_hanzo_studio_version?: string;
   /** List of operating systems that this node supports */
   supported_os?: string[];
   tags?: string[];
@@ -7157,7 +7157,7 @@ export type ReleaseNoteProject = typeof ReleaseNoteProject[keyof typeof ReleaseN
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ReleaseNoteProject = {
   comfyui: 'comfyui',
-  comfyui_frontend: 'comfyui_frontend',
+  hanzo_studio_frontend: 'hanzo_studio_frontend',
   desktop: 'desktop',
   cloud: 'cloud',
 } as const;
@@ -11361,16 +11361,16 @@ export type AdminUpdateNodeVersionBody = {
   status_reason?: string;
   /** List of accelerators (e.g. CUDA, DirectML, ROCm) that this node supports */
   supported_accelerators?: string[];
-  /** Supported versions of ComfyUI frontend */
-  supported_comfyui_frontend_version?: string;
-  /** Supported versions of ComfyUI */
-  supported_comfyui_version?: string;
+  /** Supported versions of Hanzo Studio frontend */
+  supported_hanzo_studio_frontend_version?: string;
+  /** Supported versions of Hanzo Studio */
+  supported_hanzo_studio_version?: string;
   /** List of operating systems that this node supports */
   supported_os?: string[];
 };
 
 export type VerifyApiKeyBody = {
-  /** The ComfyUI API key to verify (e.g., comfy_xxx...) */
+  /** The Hanzo Studio API key to verify (e.g., comfy_xxx...) */
   api_key: string;
 };
 
@@ -11413,7 +11413,7 @@ node_id?: string;
  */
 node_version?: string;
 /**
- * Filter by ComfyUI node name
+ * Filter by Hanzo Studio node name
  */
 comfy_node_name?: string;
 };
@@ -11834,7 +11834,7 @@ node_id?: string[];
 /**
  * Comfy UI version
  */
-comfyui_version?: string;
+hanzo_studio_version?: string;
 /**
  * The platform requesting the nodes
  */
@@ -12770,7 +12770,7 @@ export type GetReleaseNotesProject = typeof GetReleaseNotesProject[keyof typeof 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const GetReleaseNotesProject = {
   comfyui: 'comfyui',
-  comfyui_frontend: 'comfyui_frontend',
+  hanzo_studio_frontend: 'hanzo_studio_frontend',
   desktop: 'desktop',
   cloud: 'cloud',
 } as const;
@@ -12803,7 +12803,7 @@ export type PostUploadArtifactBody = {
   branch_name: string;
   /** The name of the bucket where the output files are stored */
   bucket_name?: string;
-  /** The path to ComfyUI logs. eg. gs://bucket-name/logs */
+  /** The path to Hanzo Studio logs. eg. gs://bucket-name/logs */
   comfy_logs_gcs_path?: string;
   /** The flags used in the comfy run */
   comfy_run_flags?: string;
@@ -13356,11 +13356,11 @@ export const useAdminUpdateNodeVersion = <TError = ErrorResponse | void,
     }
     
 /**
- * Validates a ComfyUI API key and returns the associated customer information.
-This endpoint is used by cloud.comfy.org to authenticate users via API keys
+ * Validates a Hanzo Studio API key and returns the associated customer information.
+This endpoint is used by cloud.hanzo.ai to authenticate users via API keys
 instead of Firebase tokens.
 
- * @summary Verify a ComfyUI API key and return customer details
+ * @summary Verify a Hanzo Studio API key and return customer details
  */
 export const verifyApiKey = (
     verifyApiKeyBody: VerifyApiKeyBody,
@@ -13408,7 +13408,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
     export type VerifyApiKeyMutationError = void | ErrorResponse
 
     /**
- * @summary Verify a ComfyUI API key and return customer details
+ * @summary Verify a Hanzo Studio API key and return customer details
  */
 export const useVerifyApiKey = <TError = void | ErrorResponse,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof verifyApiKey>>, TError,{data: VerifyApiKeyBody}, TContext>, request?: SecondParameter<typeof customInstance>}
@@ -13743,8 +13743,8 @@ export const useComfyNodesBackfill = <TError = ErrorResponse | void,
     }
     
 /**
- * Returns the node that contains a ComfyUI node with the specified name
- * @summary Retrieve a node by ComfyUI node name
+ * Returns the node that contains a Hanzo Studio node with the specified name
+ * @summary Retrieve a node by Hanzo Studio node name
  */
 export const getNodeByComfyNodeName = (
     comfyNodeName: string,
@@ -13815,7 +13815,7 @@ export function useGetNodeByComfyNodeName<TData = Awaited<ReturnType<typeof getN
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 /**
- * @summary Retrieve a node by ComfyUI node name
+ * @summary Retrieve a node by Hanzo Studio node name
  */
 
 export function useGetNodeByComfyNodeName<TData = Awaited<ReturnType<typeof getNodeByComfyNodeName>>, TError = ErrorResponse>(
@@ -31030,8 +31030,8 @@ export function useSecurityScan<TData = Awaited<ReturnType<typeof securityScan>>
 
 
 /**
- * Receive artifacts (output files) from the ComfyUI GitHub Action
- * @summary Receive artifacts (output files) from the ComfyUI GitHub Action
+ * Receive artifacts (output files) from the Hanzo Studio GitHub Action
+ * @summary Receive artifacts (output files) from the Hanzo Studio GitHub Action
  */
 export const postUploadArtifact = (
     postUploadArtifactBody: PostUploadArtifactBody,
@@ -31079,7 +31079,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
     export type PostUploadArtifactMutationError = void
 
     /**
- * @summary Receive artifacts (output files) from the ComfyUI GitHub Action
+ * @summary Receive artifacts (output files) from the Hanzo Studio GitHub Action
  */
 export const usePostUploadArtifact = <TError = void,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postUploadArtifact>>, TError,{data: PostUploadArtifactBody}, TContext>, request?: SecondParameter<typeof customInstance>}

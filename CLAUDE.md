@@ -56,7 +56,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Key Features
 
-- **Node Registry**: Browse, search, and manage ComfyUI custom nodes
+- **Node Registry**: Browse, search, and manage Hanzo Studio custom nodes
 - **Publisher Management**: Create and manage node publishers
 - **Admin Panel**: Admin-only features for node management
 - **Search & Discovery**: Algolia-powered search with autocomplete

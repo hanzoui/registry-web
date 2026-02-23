@@ -27,7 +27,7 @@ import { NodeStatusBadge } from "./NodeStatusBadge";
 import { parseIssueList } from "./parseIssueList";
 import { parseJsonSafe } from "./parseJsonSafe";
 
-// schema reference from (private): https://github.com/Comfy-Org/security-scanner
+// schema reference from (private): https://github.com/hanzoui/security-scanner
 export const zErrorArray = z
   .object({
     issue_type: z.string(), // The error type is represented as a string
@@ -165,7 +165,7 @@ export function NodeStatusReason(nv: NodeVersion) {
 
   // const statusReason =
   //     zStatusReason.safeParse(statusReasonJson).data ??
-  //     zStatusReason.parse({ message: status_reason, by: 'admin@comfy.org' })
+  //     zStatusReason.parse({ message: status_reason, by: 'admin@hanzo.ai' })
 
   const fullfilledIssueList = issueList
     // guess url from node

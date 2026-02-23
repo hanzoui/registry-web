@@ -41,7 +41,7 @@ jobs:
           if [ "${{ github.event.inputs.backend_url }}" != "" ]; then
             echo "NEXT_PUBLIC_BACKEND_URL=${{ github.event.inputs.backend_url }}" >> $GITHUB_ENV
           else
-            echo "NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL:-https://api.comfy.org}" >> $GITHUB_ENV
+            echo "NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL:-https://api.hanzo.ai}" >> $GITHUB_ENV
           fi
 
       - name: Check if API spec is accessible

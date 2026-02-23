@@ -188,7 +188,7 @@ function NodeVersionList({}) {
     const previousHistory = prevStatusReason?.statusHistory ?? [];
     const previousStatus = nv.status ?? "Unknown Status"; // should not happen
     const previousMessage = prevStatusReason?.message ?? nv.status_reason ?? ""; // use raw msg if fail to parse json
-    const previousBy = prevStatusReason?.by ?? "admin@comfy.org"; // unknown admin
+    const previousBy = prevStatusReason?.by ?? "admin@hanzo.ai"; // unknown admin
 
     // concat history
     const statusHistory = [
@@ -204,7 +204,7 @@ function NodeVersionList({}) {
     // updated status reason, with history and optionally batchId
     const reason = zStatusReason.parse({
       message,
-      by: user?.email ?? "admin@comfy.org", // if user is not loaded, use 'Admin'
+      by: user?.email ?? "admin@hanzo.ai", // if user is not loaded, use 'Admin'
       statusHistory,
       ...(batchId ? { batchId } : {}), // Include batchId if provided
     });
@@ -275,7 +275,7 @@ function NodeVersionList({}) {
     const previousHistory = prevStatusReason?.statusHistory ?? [];
     const previousStatus = nv.status ?? "Unknown Status"; // should not happen
     const previousMessage = prevStatusReason?.message ?? nv.status_reason ?? ""; // use raw msg if fail to parse json
-    const previousBy = prevStatusReason?.by ?? "admin@comfy.org"; // unknown admin
+    const previousBy = prevStatusReason?.by ?? "admin@hanzo.ai"; // unknown admin
 
     // concat history
     const statusHistory = [
@@ -290,7 +290,7 @@ function NodeVersionList({}) {
     // updated status reason, with history and batchId for future undo-a-batch
     const reason = zStatusReason.parse({
       message,
-      by: user?.email ?? "admin@comfy.org",
+      by: user?.email ?? "admin@hanzo.ai",
       statusHistory,
       batchId, // Include the batchId for future undo-a-batch functionality
     });
@@ -327,7 +327,7 @@ function NodeVersionList({}) {
     const previousHistory = prevStatusReason?.statusHistory ?? [];
     const previousStatus = nv.status ?? "Unknown Status"; // should not happen
     const previousMessage = prevStatusReason?.message ?? nv.status_reason ?? ""; // use raw msg if fail to parse json
-    const previousBy = prevStatusReason?.by ?? "admin@comfy.org"; // unknown admin
+    const previousBy = prevStatusReason?.by ?? "admin@hanzo.ai"; // unknown admin
 
     // concat history
     const statusHistory = [
@@ -342,7 +342,7 @@ function NodeVersionList({}) {
     // updated status reason, with history and batchId for future undo-a-batch
     const reason = zStatusReason.parse({
       message,
-      by: user?.email ?? "admin@comfy.org",
+      by: user?.email ?? "admin@hanzo.ai",
       statusHistory,
       batchId, // Include the batchId for future undo-a-batch functionality
     });

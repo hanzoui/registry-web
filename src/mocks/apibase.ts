@@ -1,5 +1,5 @@
 export const CAPI = (path: `/${string}`) => {
-  // api.comfy.org
+  // api.hanzo.ai
   return new URL(path, process.env.NEXT_PUBLIC_BACKEND_URL!).toString();
 };
 

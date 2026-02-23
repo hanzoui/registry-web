@@ -40,7 +40,7 @@ type Story = StoryObj<typeof UnclaimedNodeCard>;
 const sampleUnclaimedNode: Node = {
   id: "unclaimed-node-1",
   name: "Unclaimed Custom Node",
-  description: "This is an unclaimed ComfyUI custom node that needs to be claimed by a publisher.",
+  description: "This is an unclaimed Hanzo Studio custom node that needs to be claimed by a publisher.",
   icon: "https://via.placeholder.com/200",
   downloads: 850,
   rating: 4.2,

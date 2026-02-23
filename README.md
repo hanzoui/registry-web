@@ -1,10 +1,10 @@
-# Comfy Registry Frontend
+# hanzo registry Frontend
 
-The frontend React App for [Comfy Registry](https://registry.comfy.org/).
+The frontend React App for [hanzo registry](https://registry.hanzo.ai/).
 
-Registry React Frontend [Github](https://github.com/Comfy-Org/registry-web)
+Registry React Frontend [Github](https://github.com/hanzoui/registry-web)
 
-Registry CLI [Github](https://github.com/yoland68/comfy-cli)
+Registry CLI [Github](https://github.com/yoland68/hanzo-cli)
 
 ## Getting Started
 
