@@ -1,3 +1,4 @@
+# Secrets: Hanzo KMS (kms.hanzo.ai) — auth via Hanzo IAM
 name: Chromatic Visual Testing
 
 on:
@@ -14,6 +15,13 @@ jobs:
     name: Deploy Storybook to Chromatic
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch secrets from Hanzo KMS
+        id: kms
+        uses: hanzoui/.github/actions/kms-secrets@main
+        with:
+          kms_client_id: ${{ secrets.KMS_CLIENT_ID }}
+          kms_client_secret: ${{ secrets.KMS_CLIENT_SECRET }}
+          secrets: 'CHROMATIC_PROJECT_TOKEN'
       # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -48,7 +56,7 @@ jobs:
           (github.event_name == 'pull_request' && contains(github.head_ref, 'storybook'))
         uses: chromaui/action@v1
         with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ steps.kms.outputs.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: public/_storybook
           exitZeroOnChanges: true # Optional: Exit with success status even if there are UI changes
           autoAcceptChanges: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} # Only auto-accept on main branch
