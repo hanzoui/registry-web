@@ -41,10 +41,10 @@ const mockNodes: Node[] = [
   },
   {
     id: "hanzo-studio-animatediff-evolved",
-    name: "Hanzo Studio-AnimateDiff-Evolved",
+    name: "HanzoStudio-AnimateDiff-Evolved",
     description: "Advanced AnimateDiff implementation for Hanzo Studio",
     author: "Kosinkadink",
-    repository: "https://github.com/Kosinkadink/Hanzo Studio-AnimateDiff-Evolved",
+    repository: "https://github.com/Kosinkadink/HanzoStudio-AnimateDiff-Evolved",
     github_stars: 892,
     downloads: 5420,
     publisher: {
@@ -61,7 +61,7 @@ const mockNodes: Node[] = [
       downloadUrl: "https://api.example.com/downloads/hanzo-studio-animatediff-evolved/v3.0.0.zip",
     },
     license: "MIT",
-    icon: "https://raw.githubusercontent.com/Kosinkadink/Hanzo Studio-AnimateDiff-Evolved/main/icon.png",
+    icon: "https://raw.githubusercontent.com/Kosinkadink/HanzoStudio-AnimateDiff-Evolved/main/icon.png",
     status: NodeStatus.NodeStatusActive,
     search_ranking: 5,
     preempted_comfy_node_names: ["AnimateDiffEvolvedLoader", "AnimateDiffSampler"],
