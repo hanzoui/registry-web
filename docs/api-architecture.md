@@ -2,7 +2,7 @@
 
 ## Overview
 
-The ComfyUI Registry Web application uses a modern API architecture built on top of auto-generated TypeScript clients and React Query for state management. The system is designed around a RESTful backend API with automatic type generation and caching.
+The Hanzo Registry Web application uses a modern API architecture built on top of auto-generated TypeScript clients and React Query for state management. The system is designed around a RESTful backend API with automatic type generation and caching.
 
 ## API Client Generation
 

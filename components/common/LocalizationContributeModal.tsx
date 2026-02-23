@@ -15,7 +15,7 @@ export const LocalizationContributeModal: React.FC<LocalizationContributeModalPr
   const { t } = useNextTranslation();
 
   const handleContribute = () => {
-    window.open("https://github.com/Comfy-Org/registry-web/issues/206", "_blank");
+    window.open("https://github.com/hanzoui/registry-web/issues/206", "_blank");
     onClose();
   };
 

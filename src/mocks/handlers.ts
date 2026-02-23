@@ -12,17 +12,17 @@ import { CAPI } from "./apibase";
 // Mock data
 const mockNodes: Node[] = [
   {
-    id: "example-comfyui-custom-node",
-    name: "Example ComfyUI Custom Node",
-    description: "A demonstration custom node for ComfyUI showcasing basic functionality",
-    author: "A ComfyUI Publisher",
-    repository: "https://github.com/example/comfyui-custom-node",
+    id: "example-hanzo-studio-custom-node",
+    name: "Example Hanzo Studio Custom Node",
+    description: "A demonstration custom node for Hanzo Studio showcasing basic functionality",
+    author: "A Hanzo Studio Publisher",
+    repository: "https://github.com/example/hanzo-studio-custom-node",
     github_stars: 156,
     downloads: 1250,
     publisher: {
       id: "a-comfy-ui-publisher",
-      name: "A ComfyUI Publisher",
-      description: "Professional ComfyUI extension publisher",
+      name: "A Hanzo Studio Publisher",
+      description: "Professional Hanzo Studio extension publisher",
       logo: "https://avatars.githubusercontent.com/u/comfyui?v=4",
       status: PublisherStatus.PublisherStatusActive,
       createdAt: "2023-04-01T00:00:00Z",
@@ -30,27 +30,27 @@ const mockNodes: Node[] = [
     tags: ["example", "custom", "demo"],
     latest_version: {
       version: "1.0.0",
-      downloadUrl: "https://api.example.com/downloads/example-comfyui-custom-node/v1.0.0.zip",
+      downloadUrl: "https://api.example.com/downloads/example-hanzo-studio-custom-node/v1.0.0.zip",
     },
     license: "MIT",
-    icon: "https://raw.githubusercontent.com/example/comfyui-custom-node/main/icon.png",
+    icon: "https://raw.githubusercontent.com/example/hanzo-studio-custom-node/main/icon.png",
     status: NodeStatus.NodeStatusActive,
     search_ranking: 2,
     preempted_comfy_node_names: ["ExampleNode", "CustomProcessor"],
     created_at: "2023-09-01T00:00:00Z",
   },
   {
-    id: "comfyui-animatediff-evolved",
-    name: "ComfyUI-AnimateDiff-Evolved",
-    description: "Advanced AnimateDiff implementation for ComfyUI",
+    id: "hanzo-studio-animatediff-evolved",
+    name: "Hanzo Studio-AnimateDiff-Evolved",
+    description: "Advanced AnimateDiff implementation for Hanzo Studio",
     author: "Kosinkadink",
-    repository: "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved",
+    repository: "https://github.com/Kosinkadink/Hanzo Studio-AnimateDiff-Evolved",
     github_stars: 892,
     downloads: 5420,
     publisher: {
       id: "kosinkadink",
       name: "Kosinkadink",
-      description: "ComfyUI node developer",
+      description: "Hanzo Studio node developer",
       logo: "https://avatars.githubusercontent.com/u/7365912?v=4",
       status: PublisherStatus.PublisherStatusActive,
       createdAt: "2023-01-01T00:00:00Z",
@@ -58,27 +58,27 @@ const mockNodes: Node[] = [
     tags: ["animation", "diffusion", "video"],
     latest_version: {
       version: "3.0.0",
-      downloadUrl: "https://api.example.com/downloads/comfyui-animatediff-evolved/v3.0.0.zip",
+      downloadUrl: "https://api.example.com/downloads/hanzo-studio-animatediff-evolved/v3.0.0.zip",
     },
     license: "MIT",
-    icon: "https://raw.githubusercontent.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved/main/icon.png",
+    icon: "https://raw.githubusercontent.com/Kosinkadink/Hanzo Studio-AnimateDiff-Evolved/main/icon.png",
     status: NodeStatus.NodeStatusActive,
     search_ranking: 5,
     preempted_comfy_node_names: ["AnimateDiffEvolvedLoader", "AnimateDiffSampler"],
     created_at: "2023-06-01T00:00:00Z",
   },
   {
-    id: "comfyui-manager",
-    name: "ComfyUI-Manager",
-    description: "Extension manager for ComfyUI",
+    id: "hanzo-studio-manager",
+    name: "Hanzo Manager",
+    description: "Extension manager for Hanzo Studio",
     author: "ltdrdata",
-    repository: "https://github.com/ltdrdata/ComfyUI-Manager",
+    repository: "https://github.com/ltdrdata/Hanzo Manager",
     github_stars: 1245,
     downloads: 8934,
     publisher: {
       id: "ltdrdata",
       name: "ltdrdata",
-      description: "ComfyUI Manager developer",
+      description: "Hanzo Manager developer",
       logo: "https://avatars.githubusercontent.com/u/128333288?v=4",
       status: PublisherStatus.PublisherStatusActive,
       createdAt: "2023-02-01T00:00:00Z",
@@ -86,10 +86,10 @@ const mockNodes: Node[] = [
     tags: ["manager", "utility", "tools"],
     latest_version: {
       version: "2.15.0",
-      downloadUrl: "https://api.example.com/downloads/comfyui-manager/v2.15.0.zip",
+      downloadUrl: "https://api.example.com/downloads/hanzo-studio-manager/v2.15.0.zip",
     },
     license: "GPL-3.0",
-    icon: "https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/icon.png",
+    icon: "https://raw.githubusercontent.com/ltdrdata/Hanzo Manager/main/icon.png",
     status: NodeStatus.NodeStatusActive,
     search_ranking: 3,
     preempted_comfy_node_names: ["ManagerInstaller", "ManagerUpdater"],
@@ -100,8 +100,8 @@ const mockNodes: Node[] = [
 const mockPublishers: Publisher[] = [
   {
     id: "a-comfy-ui-publisher",
-    name: "Example ComfyUI Publisher",
-    description: "Professional ComfyUI extension publisher",
+    name: "Example Hanzo Studio Publisher",
+    description: "Professional Hanzo Studio extension publisher",
     logo: "https://avatars.githubusercontent.com/u/comfyui?v=4",
     status: PublisherStatus.PublisherStatusActive,
     createdAt: "2023-04-01T00:00:00Z",
@@ -109,7 +109,7 @@ const mockPublishers: Publisher[] = [
   {
     id: "kosinkadink",
     name: "Kosinkadink",
-    description: "ComfyUI node developer",
+    description: "Hanzo Studio node developer",
     logo: "https://avatars.githubusercontent.com/u/7365912?v=4",
     status: PublisherStatus.PublisherStatusActive,
     createdAt: "2023-01-01T00:00:00Z",
@@ -117,7 +117,7 @@ const mockPublishers: Publisher[] = [
   {
     id: "ltdrdata",
     name: "ltdrdata",
-    description: "ComfyUI Manager developer",
+    description: "Hanzo Manager developer",
     logo: "https://avatars.githubusercontent.com/u/128333288?v=4",
     status: PublisherStatus.PublisherStatusActive,
     createdAt: "2023-02-01T00:00:00Z",
@@ -125,7 +125,7 @@ const mockPublishers: Publisher[] = [
   {
     id: "snomiao",
     name: "@snomiao",
-    description: "ComfyUI node developer",
+    description: "Hanzo Studio node developer",
     logo: "https://avatars.githubusercontent.com/u/snomiao?v=4",
     status: PublisherStatus.PublisherStatusActive,
     createdAt: "2023-03-01T00:00:00Z",
@@ -134,7 +134,7 @@ const mockPublishers: Publisher[] = [
 
 const mockUser: User = {
   id: "a-comfy-ui-user",
-  name: "Example ComfyUI User",
+  name: "Example Hanzo Studio User",
   email: "a-comfy-ui-user@example.com",
   isAdmin: false,
   isApproved: true,
@@ -272,7 +272,7 @@ export const handlers = [
 
   // User's publishers
   http.get(CAPI("/users/publishers"), () => {
-    return HttpResponse.json(mockPublishers.slice(0, 1)); // Example ComfyUI Publisher
+    return HttpResponse.json(mockPublishers.slice(0, 1)); // Example Hanzo Studio Publisher
   }),
 
   // Default fallback for unmatched requests

@@ -45,7 +45,7 @@ const conf: NextConfig = {
     return [
       {
         source: "/discord",
-        destination: "https://discord.gg/comfyorg",
+        destination: "https://discord.gg/hanzoai",
         permanent: false,
       },
     ];

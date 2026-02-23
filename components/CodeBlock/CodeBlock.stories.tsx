@@ -28,7 +28,7 @@ export const LongCommand: Story = {
 
 export const MultiLine: Story = {
   args: {
-    code: `npm install -g comfy-cli
+    code: `npm install -g hanzo-cli
 comfy login
 comfy install my-node-id`,
   },

@@ -16,8 +16,8 @@ import {
 import { useNextTranslation } from "@/src/hooks/i18n";
 
 interface FormData {
-  supported_comfyui_frontend_version: string;
-  supported_comfyui_version: string;
+  supported_hanzo_studio_frontend_version: string;
+  supported_hanzo_studio_version: string;
   supported_os: string;
   supported_accelerators: string;
 }
@@ -55,8 +55,8 @@ export default function NodeVersionCompatibilityEditModal({
     formState: { isDirty },
   } = useForm<FormData>({
     defaultValues: {
-      supported_comfyui_frontend_version: nodeVersion?.supported_comfyui_frontend_version || "",
-      supported_comfyui_version: nodeVersion?.supported_comfyui_version || "",
+      supported_hanzo_studio_frontend_version: nodeVersion?.supported_hanzo_studio_frontend_version || "",
+      supported_hanzo_studio_version: nodeVersion?.supported_hanzo_studio_version || "",
       supported_os: nodeVersion?.supported_os?.join("\n") || "",
       supported_accelerators: nodeVersion?.supported_accelerators?.join("\n") || "",
     },
@@ -66,8 +66,8 @@ export default function NodeVersionCompatibilityEditModal({
   useEffect(() => {
     if (nodeVersion && isOpen) {
       reset({
-        supported_comfyui_frontend_version: nodeVersion.supported_comfyui_frontend_version || "",
-        supported_comfyui_version: nodeVersion.supported_comfyui_version || "",
+        supported_hanzo_studio_frontend_version: nodeVersion.supported_hanzo_studio_frontend_version || "",
+        supported_hanzo_studio_version: nodeVersion.supported_hanzo_studio_version || "",
         supported_os: nodeVersion.supported_os?.join("\n") || "",
         supported_accelerators: nodeVersion.supported_accelerators?.join("\n") || "",
       });
@@ -99,8 +99,8 @@ export default function NodeVersionCompatibilityEditModal({
           nodeVersion.version ||
           DIES(toast.error.bind(toast), t("Node Version Number is required")),
         data: {
-          supported_comfyui_frontend_version: data.supported_comfyui_frontend_version,
-          supported_comfyui_version: data.supported_comfyui_version,
+          supported_hanzo_studio_frontend_version: data.supported_hanzo_studio_frontend_version,
+          supported_hanzo_studio_version: data.supported_hanzo_studio_version,
           supported_os: normalizeSupportList(data.supported_os),
           supported_accelerators: normalizeSupportList(data.supported_accelerators),
         },
@@ -165,11 +165,11 @@ export default function NodeVersionCompatibilityEditModal({
               <div className="text-sm text-blue-800 dark:text-blue-200">
                 <span className="font-medium">{t("Specification Reference:")}</span>{" "}
                 <Link
-                  href="https://docs.comfy.org/registry/specifications#specifications"
+                  href="https://docs.hanzo.ai/registry/specifications#specifications"
                   target="_blank"
                   className="underline hover:text-blue-600 dark:hover:text-blue-300"
                 >
-                  {t("pyproject.toml - ComfyUI")}
+                  {t("pyproject.toml - Hanzo Studio")}
                 </Link>
               </div>
             </div>
@@ -200,10 +200,10 @@ export default function NodeVersionCompatibilityEditModal({
                           const latestVersion = nodeData.latest_version;
                           if (latestVersion) {
                             reset({
-                              supported_comfyui_frontend_version:
-                                latestVersion.supported_comfyui_frontend_version || "",
-                              supported_comfyui_version:
-                                latestVersion.supported_comfyui_version || "",
+                              supported_hanzo_studio_frontend_version:
+                                latestVersion.supported_hanzo_studio_frontend_version || "",
+                              supported_hanzo_studio_version:
+                                latestVersion.supported_hanzo_studio_version || "",
                               supported_os: latestVersion.supported_os?.join("\n") || "",
                               supported_accelerators:
                                 latestVersion.supported_accelerators?.join("\n") || "",
@@ -216,16 +216,16 @@ export default function NodeVersionCompatibilityEditModal({
                       </Button>
                     </div>
                     <div className="text-sm space-y-1">
-                      {nodeData.latest_version.supported_comfyui_frontend_version && (
+                      {nodeData.latest_version.supported_hanzo_studio_frontend_version && (
                         <div>
-                          <span className="font-medium">{t("ComfyUI Frontend")}:</span>{" "}
-                          {nodeData.latest_version.supported_comfyui_frontend_version}
+                          <span className="font-medium">{t("Hanzo Frontend")}:</span>{" "}
+                          {nodeData.latest_version.supported_hanzo_studio_frontend_version}
                         </div>
                       )}
-                      {nodeData.latest_version.supported_comfyui_version && (
+                      {nodeData.latest_version.supported_hanzo_studio_version && (
                         <div>
-                          <span className="font-medium">{t("ComfyUI")}:</span>{" "}
-                          {nodeData.latest_version.supported_comfyui_version}
+                          <span className="font-medium">{t("Hanzo Studio")}:</span>{" "}
+                          {nodeData.latest_version.supported_hanzo_studio_version}
                         </div>
                       )}
                       {nodeData.latest_version.supported_os &&
@@ -265,30 +265,30 @@ export default function NodeVersionCompatibilityEditModal({
               )}
 
             <div>
-              <Label htmlFor="comfyui-frontend-version">{t("ComfyUI Frontend Version")}</Label>
+              <Label htmlFor="hanzo-studio-frontend-version">{t("Hanzo Frontend Version")}</Label>
               <Controller
-                name="supported_comfyui_frontend_version"
+                name="supported_hanzo_studio_frontend_version"
                 control={control}
                 render={({ field }) => (
                   <TextInput
-                    id="comfyui-frontend-version"
+                    id="hanzo-studio-frontend-version"
                     {...field}
-                    placeholder={t("Enter supported ComfyUI frontend version")}
+                    placeholder={t("Enter supported Hanzo Studio frontend version")}
                   />
                 )}
               />
             </div>
 
             <div>
-              <Label htmlFor="comfyui-version">{t("ComfyUI Version")}</Label>
+              <Label htmlFor="hanzo-studio-version">{t("Hanzo Studio Version")}</Label>
               <Controller
-                name="supported_comfyui_version"
+                name="supported_hanzo_studio_version"
                 control={control}
                 render={({ field }) => (
                   <TextInput
-                    id="comfyui-version"
+                    id="hanzo-studio-version"
                     {...field}
-                    placeholder={t("Enter supported ComfyUI version")}
+                    placeholder={t("Enter supported Hanzo Studio version")}
                   />
                 )}
               />

@@ -20,9 +20,9 @@ const NodeDetailsStory: React.FC<{
     // Mock data
     const node = {
         id: 'node-123',
-        name: 'Example ComfyUI Node',
+        name: 'Example Hanzo Studio Node',
         description:
-            'This is an example node for ComfyUI with various features and capabilities.',
+            'This is an example node for Hanzo Studio with various features and capabilities.',
         icon: '',
         downloads: 12500,
         status: NodeStatus.NodeStatusActive,
