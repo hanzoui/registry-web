@@ -1,3 +1,4 @@
+# Secrets: Hanzo KMS (kms.hanzo.ai) — auth via Hanzo IAM
 name: Next.js CI
 
 on:
@@ -13,6 +14,13 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch secrets from Hanzo KMS
+        id: kms
+        uses: hanzoui/.github/actions/kms-secrets@main
+        with:
+          kms_client_id: ${{ secrets.KMS_CLIENT_ID }}
+          kms_client_secret: ${{ secrets.KMS_CLIENT_SECRET }}
+          secrets: 'OPENAI_API_KEY'
       - uses: actions/checkout@v2
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -31,7 +39,7 @@ jobs:
       - name: Scan i18n Keys
         run: bun scripts/scan-i18n.ts
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ steps.kms.outputs.OPENAI_API_KEY }}
       - name: Sort package.json
         run: bunx sort-package-json
       - name: Build the Next.js Project

@@ -1,3 +1,4 @@
+# Secrets: Hanzo KMS (kms.hanzo.ai) — auth via Hanzo IAM
 name: Expo Update
 on:
   push:
@@ -15,9 +16,16 @@ jobs:
     env:
       working-directory: ./NativeApp
     steps:
+      - name: Fetch secrets from Hanzo KMS
+        id: kms
+        uses: hanzoui/.github/actions/kms-secrets@main
+        with:
+          kms_client_id: ${{ secrets.KMS_CLIENT_ID }}
+          kms_client_secret: ${{ secrets.KMS_CLIENT_SECRET }}
+          secrets: 'EXPO_TOKEN'
       - name: Check for EXPO_TOKEN
         run: |
-          if [ -z "${{ secrets.EXPO_TOKEN }}" ]; then
+          if [ -z "${{ steps.kms.outputs.EXPO_TOKEN }}" ]; then
             echo "You must provide an EXPO_TOKEN secret linked to this project's Expo account in this repo's secrets. Learn more: https://docs.expo.dev/eas-update/github-actions"
             exit 1
           fi
@@ -37,7 +45,7 @@ jobs:
         with:
           expo-version: latest
           eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ steps.kms.outputs.EXPO_TOKEN }}
 
       - name: Install dependencies
         run: npm install
