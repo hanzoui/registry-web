@@ -4,8 +4,8 @@ import { Publisher } from "@/src/api/generated";
 const samplePublishers: Publisher[] = [
   {
     id: "publisher-1",
-    name: "ComfyUI Publisher",
-    description: "Official ComfyUI publisher",
+    name: "Hanzo Studio Publisher",
+    description: "Official Hanzo Studio publisher",
   },
   {
     id: "publisher-2",

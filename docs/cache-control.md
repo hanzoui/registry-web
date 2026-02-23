@@ -78,18 +78,18 @@ export const INVALIDATE_CACHE_OPTION = {
 - **When to Invalidate**: After any node version mutation (create, update, delete, status change)
 - **Cache-Busting Required**: ✅ Yes (CDN cached)
 
-### 3. ComfyUI Node by Name: `/comfy-nodes/{comfyNodeName}/node`
+### 3. Hanzo Studio Node by Name: `/comfy-nodes/{comfyNodeName}/node`
 
 - **Query Hook**: `useGetNodeByComfyNodeName`
 - **Cache Option**: `shouldInvalidate.getGetNodeByComfyNodeNameQueryOptions`
-- **When to Invalidate**: After any node or version mutation affecting ComfyUI nodes
+- **When to Invalidate**: After any node or version mutation affecting Hanzo Studio nodes
 - **Cache-Busting Required**: ✅ Yes (CDN cached)
 
-### 4. ComfyUI Nodes List: `/nodes/{nodeId}/versions/{versionId}/comfy-nodes`
+### 4. Hanzo Studio Nodes List: `/nodes/{nodeId}/versions/{versionId}/comfy-nodes`
 
 - **Query Hook**: `useListComfyNodes`
 - **Cache Option**: `shouldInvalidate.getListComfyNodesQueryOptions`
-- **When to Invalidate**: After any ComfyUI node mutation
+- **When to Invalidate**: After any Hanzo Studio node mutation
 - **Cache-Busting Required**: ✅ Yes (CDN cached)
 
 ## Cache Invalidation Strategy
@@ -166,7 +166,7 @@ The following components properly implement manual cache-busting for cached endp
 - ✅ `pages/admin/nodeversions.tsx` - Bulk admin operations
 - ✅ `components/nodes/AdminNodeClaimModal.tsx` - Admin node claiming
 - ✅ `components/nodes/SearchRankingEditModal.tsx` - Search ranking updates
-- ✅ `components/nodes/PreemptedComfyNodeNamesEditModal.tsx` - ComfyUI name updates
+- ✅ `components/nodes/PreemptedComfyNodeNamesEditModal.tsx` - Hanzo Studio name updates
 
 ## Implementation Pattern for Mutations
 
@@ -231,8 +231,8 @@ const mutation = useMutationHook({
 
 - `/nodes/{nodeId}` - Node details
 - `/nodes/{nodeId}/versions` - Node versions
-- `/comfy-nodes/{comfyNodeName}/node` - ComfyUI node mapping
-- `/nodes/{nodeId}/versions/{versionId}/comfy-nodes` - ComfyUI nodes list
+- `/comfy-nodes/{comfyNodeName}/node` - Hanzo Studio node mapping
+- `/nodes/{nodeId}/versions/{versionId}/comfy-nodes` - Hanzo Studio nodes list
 
 ### Non-Cached Endpoints (Automatic via Interceptors)
 
@@ -281,7 +281,7 @@ All mutation operations now properly implement cache invalidation:
 - ✅ `pages/admin/nodeversions.tsx` - Bulk admin operations
 - ✅ `components/nodes/AdminNodeClaimModal.tsx` - Admin node claiming
 - ✅ `components/nodes/SearchRankingEditModal.tsx` - Search ranking updates
-- ✅ `components/nodes/PreemptedComfyNodeNamesEditModal.tsx` - ComfyUI name updates
+- ✅ `components/nodes/PreemptedComfyNodeNamesEditModal.tsx` - Hanzo Studio name updates
 
 #### Auto-Invalidated Endpoints (Axios Interceptors)
 

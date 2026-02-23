@@ -2,7 +2,7 @@
 
 ## Overview
 
-The admin dashboard provides Comfy-Org members and Registry Admins with tools to manage the Registry platform. The dashboard is accessible at `/admin` and requires admin authentication.
+The admin dashboard provides hanzoui members and Registry Admins with tools to manage the Registry platform. The dashboard is accessible at `/admin` and requires admin authentication.
 
 ## Pages and Components
 
@@ -24,8 +24,8 @@ A specialized admin page for managing node version compatibility metadata. This 
 
 - View all node versions in a paginated table
 - Edit compatibility fields for each node version:
-  - `supported_comfyui_frontend_version` - ComfyUI Frontend version constraints
-  - `supported_comfyui_version` - ComfyUI version constraints
+  - `supported_hanzo_studio_frontend_version` - Hanzo Frontend version constraints
+  - `supported_hanzo_studio_version` - Hanzo Studio version constraints
   - `supported_os` - Operating system compatibility
   - `supported_accelerators` - Hardware accelerator support
 
@@ -35,16 +35,16 @@ A specialized admin page for managing node version compatibility metadata. This 
 2. Navigates to `/admin/node-version-compatibility`
 3. Finds the specific node version in the table
 4. Clicks "Edit" to modify compatibility fields
-5. Updates the relevant compatibility constraints (e.g., adding `<0.0.4` for ComfyUI Frontend incompatibility)
+5. Updates the relevant compatibility constraints (e.g., adding `<0.0.4` for Hanzo Frontend incompatibility)
 6. Saves the changes
 
 #### Example Use Case
 
-If `comfyui-impact-pack` v1.0.2 is reported as incompatible with `ComfyUI_frontend` v0.0.4:
+If `hanzo-studio-impact-pack` v1.0.2 is reported as incompatible with `Hanzo Studio_frontend` v0.0.4:
 
-1. Find the row for `comfyui-impact-pack` version `1.0.2`
+1. Find the row for `hanzo-studio-impact-pack` version `1.0.2`
 2. Click "Edit"
-3. Update `supported_comfyui_frontend_version` field to `<0.0.4`
+3. Update `supported_hanzo_studio_frontend_version` field to `<0.0.4`
 4. Save changes
 
 ### Style and Components

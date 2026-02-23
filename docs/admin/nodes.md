@@ -2,7 +2,7 @@
 
 ## Overview
 
-Administrative interface for managing nodes in the ComfyUI Registry.
+Administrative interface for managing nodes in the Hanzo Registry.
 
 ## Implementation Tasks
 

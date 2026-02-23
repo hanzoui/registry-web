@@ -1,10 +1,10 @@
 # Node Version Compatibility Admin
 
-The Node Version Compatibility Admin page allows administrators to manage compatibility information for node versions in the ComfyUI registry. This includes specifying supported ComfyUI versions, operating systems, and accelerators for each node version.
+The Node Version Compatibility Admin page allows administrators to manage compatibility information for node versions in the Hanzo Studio registry. This includes specifying supported Hanzo Studio versions, operating systems, and accelerators for each node version.
 
 ## Overview
 
-This admin tool provides a comprehensive interface for updating node version compatibility fields that help users understand which versions of ComfyUI, operating systems, and hardware accelerators are supported by specific node versions.
+This admin tool provides a comprehensive interface for updating node version compatibility fields that help users understand which versions of Hanzo Studio, operating systems, and hardware accelerators are supported by specific node versions.
 
 ## Features
 
@@ -15,15 +15,15 @@ This admin tool provides a comprehensive interface for updating node version com
 
 ### Compatibility Management
 
-- **ComfyUI Frontend Version**: Specify which ComfyUI frontend versions are supported
-- **ComfyUI Version**: Define compatible ComfyUI backend versions
+- **Hanzo Frontend Version**: Specify which Hanzo Studio frontend versions are supported
+- **Hanzo Studio Version**: Define compatible Hanzo Studio backend versions
 - **Operating Systems**: List supported operating systems (Windows, macOS, Linux, etc.)
 - **Accelerators**: Specify supported hardware accelerators (CUDA, ROCm, Metal, CPU, etc.)
 
 ### User Interface
 
 - **Modal-based Editing**: Clean, focused editing experience in a dedicated modal
-- **Specification Reference**: Direct link to ComfyUI registry specifications documentation
+- **Specification Reference**: Direct link to Hanzo Studio registry specifications documentation
 - **Keyboard Shortcuts**: Support for Ctrl+Enter (or Cmd+Enter on Mac) to submit forms
 - **Bulk Information Display**: Overview of all node versions in a sortable table
 - **Responsive Design**: Works across different screen sizes and devices
@@ -52,12 +52,12 @@ This admin tool provides a comprehensive interface for updating node version com
 1. **Open Edit Modal**:
    - Click the "Edit" button for any node version row
    - A modal will open with the current compatibility information
-   - The modal includes a specification reference link to the ComfyUI registry documentation
+   - The modal includes a specification reference link to the Hanzo Studio registry documentation
    - The modal displays the node ID and version at the top for reference
 
 2. **Update Fields**:
-   - **ComfyUI Frontend Version**: Enter the supported frontend version (e.g., "1.2.0")
-   - **ComfyUI Version**: Enter the supported backend version (e.g., "0.1.0")
+   - **Hanzo Frontend Version**: Enter the supported frontend version (e.g., "1.2.0")
+   - **Hanzo Studio Version**: Enter the supported backend version (e.g., "0.1.0")
    - **Operating Systems**: Enter one OS per line (e.g., "Windows", "macOS", "Linux")
    - **Accelerators**: Enter one accelerator per line (e.g., "CUDA", "ROCm", "Metal", "CPU")
 
@@ -95,7 +95,7 @@ Enter accelerators one per line. Common values include:
 
 - Use semantic versioning (e.g., "1.2.0", "0.1.0")
 - Support version ranges where applicable
-- Be consistent with ComfyUI's versioning scheme
+- Be consistent with Hanzo Studio's versioning scheme
 
 ## Technical Details
 
@@ -152,7 +152,7 @@ This page requires admin-level permissions. Access is controlled by the `withAdm
 ### Maintenance
 
 1. **Regular Reviews**: Periodically review and update compatibility information
-2. **Version Alignment**: Keep compatibility info aligned with actual ComfyUI releases
+2. **Version Alignment**: Keep compatibility info aligned with actual Hanzo Studio releases
 3. **User Feedback**: Incorporate user feedback about compatibility issues
 
 ## Troubleshooting

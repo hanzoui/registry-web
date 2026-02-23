@@ -156,7 +156,7 @@ function NodeVersionCompatibilityAdmin() {
 
         const outdatedList = e.filter((x) => x.isOutdated);
         console.log(outdatedList);
-        console.log(e.filter((x) => x.nodeId === "img2colors-comfyui-node"));
+        console.log(e.filter((x) => x.nodeId === "img2colors-hanzo-studio-node"));
         console.log(async () => {
           outdatedList.map(async (x) => {
             const node = x.node;
@@ -296,7 +296,7 @@ function NodeVersionCompatibilityAdmin() {
             </h3>
             <p className="text-sm text-yellow-700 dark:text-yellow-300 mt-1">
               {t(
-                "One-Time Migration: Update all node versions with their latest supported ComfyUI versions, OS, and accelerators",
+                "One-Time Migration: Update all node versions with their latest supported Hanzo Studio versions, OS, and accelerators",
               )}
             </p>
           </div>
@@ -423,8 +423,8 @@ function DataTable({
           <Table.HeadCell className="sticky left-0 z-20 bg-gray-800">
             {t("Node Version")}
           </Table.HeadCell>
-          <Table.HeadCell>{t("ComfyUI Frontend")}</Table.HeadCell>
-          <Table.HeadCell>{t("ComfyUI")}</Table.HeadCell>
+          <Table.HeadCell>{t("Hanzo Frontend")}</Table.HeadCell>
+          <Table.HeadCell>{t("Hanzo Studio")}</Table.HeadCell>
           <Table.HeadCell>{t("OS")}</Table.HeadCell>
           <Table.HeadCell>{t("Accelerators")}</Table.HeadCell>
           <Table.HeadCell>{t("Actions")}</Table.HeadCell>
@@ -442,12 +442,12 @@ function DataTable({
                 </div>
                 <div className="space-y-1">
                   <div>
-                    <span className="font-medium">{t("ComfyUI Frontend")}:</span>{" "}
-                    {node.supported_comfyui_frontend_version || t("Not specified")}
+                    <span className="font-medium">{t("Hanzo Frontend")}:</span>{" "}
+                    {node.supported_hanzo_studio_frontend_version || t("Not specified")}
                   </div>
                   <div>
-                    <span className="font-medium">{t("ComfyUI")}:</span>{" "}
-                    {node.supported_comfyui_version || t("Not specified")}
+                    <span className="font-medium">{t("Hanzo Studio")}:</span>{" "}
+                    {node.supported_hanzo_studio_version || t("Not specified")}
                   </div>
                   <div>
                     <span className="font-medium">{t("OS")}:</span>{" "}
@@ -485,9 +485,9 @@ function DataTable({
                           await adminUpdateNode(node?.id!, {
                             ...node,
                             supported_accelerators: nv.supported_accelerators,
-                            supported_comfyui_frontend_version:
-                              nv.supported_comfyui_frontend_version,
-                            supported_comfyui_version: nv.supported_comfyui_version,
+                            supported_hanzo_studio_frontend_version:
+                              nv.supported_hanzo_studio_frontend_version,
+                            supported_hanzo_studio_version: nv.supported_hanzo_studio_version,
                             supported_os: nv.supported_os,
                             latest_version: undefined,
                           });
@@ -538,8 +538,8 @@ function DataTable({
                     )}
                   </div>
                 </Table.Cell>
-                <Table.Cell>{nv.supported_comfyui_frontend_version || ""}</Table.Cell>
-                <Table.Cell>{nv.supported_comfyui_version || ""}</Table.Cell>
+                <Table.Cell>{nv.supported_hanzo_studio_frontend_version || ""}</Table.Cell>
+                <Table.Cell>{nv.supported_hanzo_studio_version || ""}</Table.Cell>
                 <Table.Cell>
                   <code className="whitespace-pre overflow-auto">
                     {nv.supported_os?.join("\n") || ""}
@@ -580,10 +580,10 @@ function DataTable({
 }
 function isNodeCompatibilityInfoOutdated(node: Node | null) {
   return (
-    JSON.stringify(node?.supported_comfyui_frontend_version) !==
-      JSON.stringify(node?.latest_version?.supported_comfyui_frontend_version) ||
-    JSON.stringify(node?.supported_comfyui_version) !==
-      JSON.stringify(node?.latest_version?.supported_comfyui_version) ||
+    JSON.stringify(node?.supported_hanzo_studio_frontend_version) !==
+      JSON.stringify(node?.latest_version?.supported_hanzo_studio_frontend_version) ||
+    JSON.stringify(node?.supported_hanzo_studio_version) !==
+      JSON.stringify(node?.latest_version?.supported_hanzo_studio_version) ||
     JSON.stringify(node?.supported_os || []) !==
       JSON.stringify(node?.latest_version?.supported_os || []) ||
     JSON.stringify(node?.supported_accelerators || []) !==

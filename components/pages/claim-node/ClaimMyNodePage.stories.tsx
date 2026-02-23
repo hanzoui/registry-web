@@ -44,7 +44,7 @@ const mockRouter = {
 const sampleNode: Node = {
   id: "sample-node-1",
   name: "Sample Custom Node",
-  description: "A sample ComfyUI custom node for testing purposes",
+  description: "A sample Hanzo Studio custom node for testing purposes",
   icon: "https://via.placeholder.com/200",
   downloads: 1250,
   rating: 4.5,

@@ -8,9 +8,9 @@ This document describes how to set up a GitHub OAuth App for the Comfy Registry.
 
 2. Fill in the following details:
    - **Application name**: `Comfy Registry`
-   - **Application description**: `Comfy-Org official GitHub app to verify user's GitHub account permissions for managing and claiming nodes`
-   - **Homepage URL**: `https://registry.comfy.org` (no trailing slash)
-   - **Authorization callback URL**: `https://registry.comfy.org/api/auth/github/callback`
+   - **Application description**: `hanzoui official GitHub app to verify user's GitHub account permissions for managing and claiming nodes`
+   - **Homepage URL**: `https://registry.hanzo.ai` (no trailing slash)
+   - **Authorization callback URL**: `https://registry.hanzo.ai/api/auth/github/callback`
 
 3. Click "Register application"
 

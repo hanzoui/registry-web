@@ -31,8 +31,8 @@ export default function Layout({ children }: React.PropsWithChildren) {
   return (
     <>
       <Head>
-        <title>{t("ComfyUI Registry")}</title>
-        <meta name="description" content={t("Discover and install ComfyUI custom nodes.")} />
+        <title>{t("Hanzo Registry")}</title>
+        <meta name="description" content={t("Discover and install Hanzo Studio custom nodes.")} />
         <link rel="icon" href="/favicon.ico" />
         <ThemeModeScript />
       </Head>

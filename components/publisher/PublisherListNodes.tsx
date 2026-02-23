@@ -66,12 +66,12 @@ const Nodes: React.FC = () => {
         <p className="text-blue-200 text-sm">
           {t("Wanna publish your first node? Check publish tutorial here:")}{" "}
           <a
-            href="https://docs.comfy.org/registry/publishing"
+            href="https://docs.hanzo.ai/registry/publishing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            {t("Publishing Nodes - ComfyUI")}
+            {t("Publishing Nodes - Hanzo Studio")}
           </a>
         </p>
       </div>
