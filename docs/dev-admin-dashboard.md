@@ -40,7 +40,7 @@ A specialized admin page for managing node version compatibility metadata. This 
 
 #### Example Use Case
 
-If `hanzo-studio-impact-pack` v1.0.2 is reported as incompatible with `Hanzo Studio_frontend` v0.0.4:
+If `hanzo-studio-impact-pack` v1.0.2 is reported as incompatible with `HanzoStudio_frontend` v0.0.4:
 
 1. Find the row for `hanzo-studio-impact-pack` version `1.0.2`
 2. Click "Edit"
